@@ -1,0 +1,268 @@
+/* IMPORTANDO A FONTE MONTSERRAT DO GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+/* VARIÁVEIS DE CORES PARA FACILITAR ALTERAÇÕES FUTURAS */
+:root {
+    --verde-escuro: #0d2b26;
+    --dourado: #cba358;
+    --dourado-hover: #b5904d;
+    --branco: #ffffff;
+    --texto-claro: #f4f4f4;
+    --texto-escuro: #333333;
+}
+
+/* RESET BÁSICO E APLICAÇÃO DA FONTE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: var(--texto-escuro);
+}
+
+/* 1. CABEÇALHO */
+.header {
+    background-color: var(--verde-escuro);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Configuração do tamanho da imagem da Logo */
+.logo-img {
+    max-height: 45px;
+    width: auto;
+    display: block;
+}
+
+/* ESTILIZAÇÃO PADRÃO DE BOTÕES */
+.btn-agendar, .btn-principal, .btn-secundario, .btn-enviar {
+    background-color: var(--dourado);
+    color: var(--verde-escuro);
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-agendar:hover, .btn-principal:hover, .btn-secundario:hover, .btn-enviar:hover {
+    background-color: var(--dourado-hover);
+    transform: scale(1.02);
+}
+
+/* 2. PRIMEIRA DOBRA (HERO) */
+.hero {
+    background: linear-gradient(rgba(13, 43, 38, 0.85), rgba(13, 43, 38, 0.85)), url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    color: var(--branco);
+    text-align: center;
+    padding: 140px 20px;
+}
+
+.hero-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-titulo {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--dourado);
+    line-height: 1.2;
+}
+
+.hero-subtitulo {
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.btn-principal {
+    padding: 18px 36px;
+    font-size: 18px;
+}
+
+/* 3. SEÇÃO DE DESTINOS (CARDS) */
+.destinos {
+    padding: 80px 20px;
+    background-color: var(--texto-claro);
+}
+
+.destinos-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.card-destino {
+    background-color: var(--branco);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-destino:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Imagens provisórias para os cards */
+.card-imagem-placeholder {
+    height: 240px;
+    background-color: #ddd;
+}
+.card-destino:nth-child(1) .card-imagem-placeholder {
+    background: url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover;
+}
+.card-destino:nth-child(2) .card-imagem-placeholder {
+    background: url('https://images.unsplash.com/photo-1596423735880-5f2a689b903e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover;
+}
+.card-destino:nth-child(3) .card-imagem-placeholder {
+    background: url('https://images.unsplash.com/photo-1555881400-74d7acaacd8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover;
+}
+
+.card-conteudo {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 240px);
+}
+
+.card-titulo {
+    color: var(--verde-escuro);
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.card-descricao {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.btn-secundario {
+    width: 100%;
+}
+
+/* 4. RODAPÉ E FORMULÁRIO DE CAPTAÇÃO */
+.rodape-captacao {
+    background-color: var(--verde-escuro);
+    padding: 80px 20px;
+    color: var(--branco);
+}
+
+.rodape-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rodape-texto {
+    flex: 1;
+    min-width: 300px;
+}
+
+.rodape-titulo {
+    color: var(--dourado);
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.rodape-descricao {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.rodape-formulario {
+    flex: 1;
+    min-width: 320px;
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid rgba(203, 163, 88, 0.2);
+}
+
+.grupo-input {
+    margin-bottom: 20px;
+}
+
+.grupo-input input, .grupo-input select {
+    width: 100%;
+    padding: 16px;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--branco);
+    color: var(--texto-escuro);
+    font-size: 1rem;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.grupo-input input:focus, .grupo-input select:focus {
+    box-shadow: 0 0 0 3px rgba(203, 163, 88, 0.5);
+}
+
+.grupo-input select:invalid {
+    color: #777;
+}
+
+.btn-enviar {
+    width: 100%;
+    padding: 18px;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+/* 5. REGRAS PARA CELULARES E TABLETS */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .hero-titulo {
+        font-size: 2.2rem;
+    }
+    
+    .rodape-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .rodape-formulario {
+        width: 100%;
+        padding: 30px 20px;
+    }
+}

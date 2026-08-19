@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santa Mali Imports - Imóveis de Alto Padrão</title>
+    
+    <!-- ESSA É A LINHA QUE CONECTA O VISUAL AO TEXTO -->
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <!-- A tag abaixo vai puxar a sua imagem. O arquivo na sua pasta precisa se chamar exatamente "logo.jpg" -->
+                <img src="logo.jpg" alt="Logo Santa Mali Imports" class="logo-img">
+            </div>
+            <nav class="header-nav">
+                <button class="btn-agendar">Agendar Consultoria</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+        
+        <!-- PRIMEIRA DOBRA (HERO) -->
+        <section class="hero">
+            <div class="hero-container">
+                <h1 class="hero-titulo">Descubra seu Novo Estilo de Vida Global</h1>
+                <p class="hero-subtitulo">Propriedades Exclusivas e Experiência Internacional Sem Fronteiras para o seu Patrimônio.</p>
+                <button class="btn-principal">Falar com um Especialista</button>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DE DESTINOS -->
+        <section class="destinos">
+            <div class="destinos-container">
+                
+                <!-- Card 1: Sul do Brasil -->
+                <article class="card-destino">
+                    <div class="card-imagem-placeholder"></div>
+                    <div class="card-conteudo">
+                        <h3 class="card-titulo">Sul do Brasil</h3>
+                        <p class="card-descricao">Segurança, alta valorização imobiliária e qualidade de vida inigualável nas melhores regiões do Sul.</p>
+                        <button class="btn-secundario">Explorar Propriedades</button>
+                    </div>
+                </article>
+
+                <!-- Card 2: Paraguai -->
+                <article class="card-destino">
+                    <div class="card-imagem-placeholder"></div>
+                    <div class="card-conteudo">
+                        <h3 class="card-titulo">Paraguai</h3>
+                        <p class="card-descricao">Economia em expansão, baixa carga tributária e altíssima rentabilidade para investidores visionários.</p>
+                        <button class="btn-secundario">Explorar Propriedades</button>
+                    </div>
+                </article>
+
+                <!-- Card 3: Portugal -->
+                <article class="card-destino">
+                    <div class="card-imagem-placeholder"></div>
+                    <div class="card-conteudo">
+                        <h3 class="card-titulo">Portugal</h3>
+                        <p class="card-descricao">A sua porta de entrada para a Europa. Segurança, cultura rica e oportunidades de vistos para investidores.</p>
+                        <button class="btn-secundario">Explorar Propriedades</button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ COM FORMULÁRIO -->
+    <footer class="rodape-captacao">
+        <div class="rodape-container">
+            
+            <div class="rodape-texto">
+                <h2 class="rodape-titulo">Contate um Especialista</h2>
+                <p class="rodape-descricao">Preencha o formulário ao lado com seus dados. Nossa equipe entrará em contato para um atendimento totalmente personalizado, seguro e focado em encontrar o imóvel ideal para o seu perfil.</p>
+            </div>
+
+            <div class="rodape-formulario">
+                <!-- Formulário de Captação configurado com o seu link -->
+                <form action="https://formspree.io/f/myeglnnz" method="POST" class="formulario">
+                    
+                    <div class="grupo-input">
+                        <input type="text" id="nome" name="nome" placeholder="Nome Completo" required>
+                    </div>
+
+                    <div class="grupo-input">
+                        <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
+                    </div>
+
+                    <div class="grupo-input">
+                        <input type="tel" id="whatsapp" name="whatsapp" placeholder="WhatsApp (com DDD)" required>
+                    </div>
+
+                    <div class="grupo-input">
+                        <select id="regiao" name="regiao" required>
+                            <option value="" disabled selected>Qual região mais te interessa?</option>
+                            <option value="sul-brasil">Sul do Brasil</option>
+                            <option value="paraguai">Paraguai</option>
+                            <option value="portugal">Portugal</option>
+                            <option value="indefinido">Ainda não sei, desejo falar com um consultor</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn-enviar">Enviar Solicitação</button>
+                </form>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>
