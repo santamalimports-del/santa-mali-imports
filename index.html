@@ -4,34 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Santa Mali | Patrimônio Sem Fronteiras</title>
-    <!-- Importação das Fontes -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- BARRA SUPERIOR -->
     <div class="top-bar">
         <span class="icon-globe">🌐</span> Conectando investidores a oportunidades no <span class="destaque-top">Paraguai, Portugal e Brasil</span>, com atendimento personalizado e foco em negócios imobiliários internacionais.
     </div>
 
-    <!-- CABEÇALHO / MENU -->
     <header class="navbar">
         <div class="container nav-container">
             <img src="logo-novo.png" alt="Santa Mali" class="logo">
             <nav class="nav-links">
                 <a href="#" class="active">INÍCIO</a>
                 <a href="#">SOBRE NÓS</a>
-                <a href="#">MERCADOS ⌄</a>
+                <a href="#paises">MERCADOS ⌄</a>
                 <a href="#">SERVIÇOS</a>
                 <a href="#">BLOG</a>
-                <a href="#">CONTATO</a>
+                <a href="#formulario">CONTATO</a>
             </nav>
             <a href="https://wa.me/5511999999999" target="_blank" class="btn-dark btn-small">FALE CONOSCO 💬</a>
         </div>
     </header>
 
-    <!-- SEÇÃO PRINCIPAL (HERO) -->
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
@@ -39,43 +35,41 @@
                 <hr class="linha-curta">
                 <p>Oportunidades imobiliárias selecionadas<br>no <strong class="destaque-texto">Paraguai</strong>, em <strong class="destaque-texto">Portugal</strong> e no<br><strong class="destaque-texto">Litoral Sul do Brasil.</strong></p>
                 <div class="hero-buttons">
-                    <a href="#oportunidades" class="btn-dark">CONHEÇA AS OPORTUNIDADES →</a>
+                    <a href="#paises" class="btn-dark">CONHEÇA AS OPORTUNIDADES →</a>
                     <a href="#formulario" class="btn-outline">AGENDAR UMA CONSULTORIA →</a>
                 </div>
             </div>
         </div>
         
-        <!-- BARRA DE PAÍSES NO RODAPÉ DA IMAGEM -->
-        <div class="hero-countries">
+        <div id="paises" class="hero-countries">
             <div class="container countries-container">
-                <div class="country-item">
+                <a href="paraguai.html" class="country-item">
                     <img src="https://flagcdn.com/w40/py.png" alt="Bandeira Paraguai" class="bandeira">
                     <div>
                         <h4>PARAGUAI</h4>
                         <p>Expansão, negócios<br>e novas oportunidades.</p>
                     </div>
-                </div>
+                </a>
                 <div class="divisor"></div>
-                <div class="country-item">
+                <a href="portugal.html" class="country-item">
                     <img src="https://flagcdn.com/w40/pt.png" alt="Bandeira Portugal" class="bandeira">
                     <div>
                         <h4>PORTUGAL</h4>
                         <p>Patrimônio e qualidade<br>de vida na Europa.</p>
                     </div>
-                </div>
+                </a>
                 <div class="divisor"></div>
-                <div class="country-item">
+                <a href="litoral-sul.html" class="country-item">
                     <img src="https://flagcdn.com/w40/br.png" alt="Bandeira Brasil" class="bandeira">
                     <div>
                         <h4>LITORAL SUL DO BRASIL</h4>
                         <p>Investimento, turismo<br>e qualidade de vida.</p>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO DE DIFERENCIAIS -->
     <section class="features">
         <div class="container features-container">
             <div class="feature-box">
@@ -101,7 +95,6 @@
         </div>
     </section>
 
-    <!-- SEÇÃO DE FORMULÁRIO (ANCORADA) -->
     <section id="formulario" class="contato-section">
         <div class="container contato-container">
             <div class="contato-texto">
@@ -118,7 +111,7 @@
                     
                     <select name="Interesse" required>
                         <option value="" disabled selected>Região de Interesse...</option>
-                        <option value="Litoral Sul do Brasil">Litoral Sul do Brasil </option>
+                        <option value="Litoral Sul do Brasil">Litoral Sul do Brasil</option>
                         <option value="Paraguai">Paraguai</option>
                         <option value="Portugal">Portugal</option>
                     </select>
