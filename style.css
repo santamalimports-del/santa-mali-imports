@@ -309,3 +309,13 @@ h1, h2, h3, h4 {
         flex-direction: column;
     }
 }
+/* --- ESTILO DOS BOTÕES DE PAÍSES NO HERO --- */
+.hero-countries a.country-item {
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.hero-countries a.country-item:hover {
+    transform: translateY(-3px);
+    opacity: 0.85;
+}
