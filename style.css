@@ -319,3 +319,40 @@ h1, h2, h3, h4 {
     transform: translateY(-3px);
     opacity: 0.85;
 }
+/* --- CORREÇÃO DA GRADE E DAS IMAGENS DO LITORAL SUL --- */
+.empreendimentos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.empreendimento-card {
+    background-color: var(--branco);
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+}
+
+.empreendimento-img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 240px; /* Trava a altura exata da foto para não esticar */
+    overflow: hidden;
+}
+
+.empreendimento-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantém a proporção sem distorcer */
+}
+
+.empreendimento-info {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
