@@ -3,12 +3,22 @@
 
 /* VARIÁVEIS DE CORES PARA FACILITAR ALTERAÇÕES FUTURAS */
 :root {
-    --verde-escuro: #0d2b26;
-    --dourado: #cba358;
-    --dourado-hover: #b5904d;
-    --branco: #ffffff;
-    --texto-claro: #f4f4f4;
-    --texto-escuro: #333333;
+    --verde-escuro: #122219;
+    --dourado: #b18e5a;
+    --bege-fundo: #f3f1eb;
+    --texto-titulos: #192a20;
+    --texto-corrido: #333333;
+}
+
+body {
+    background-color: var(--bege-fundo);
+    color: var(--texto-corrido);
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--texto-titulos);
 }
 
 /* RESET BÁSICO E APLICAÇÃO DA FONTE */
@@ -19,10 +29,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-body {
-    background-color: #f9f9f9;
-    color: var(--texto-escuro);
-}
+
 
 /* 1. CABEÇALHO */
 .header {
