@@ -111,19 +111,27 @@ h1, h2, h3, h4 {
     color: var(--branco);
 }
 
-/* --- SEÇÃO PRINCIPAL (HERO) COM IMAGEM DIRETO DA WEB --- */
+/* --- SEÇÃO PRINCIPAL (HERO) --- */
 .hero {
-    /* Imagem de Lisboa com degradê integrado perfeitamente */
-    background: linear-gradient(90deg, var(--bege-claro) 40%, rgba(243, 241, 235, 0.8) 55%, transparent 75%), url('fundo-claro.jpg') center/cover no-repeat;
+    /* Degradê ajustado: fica transparente muito mais cedo para revelar a imagem */
+    background: linear-gradient(90deg, var(--bege-fundo) 5%, rgba(250, 249, 246, 0.8) 25%, transparent 50%), url('fundo-claro.jpg') center/cover no-repeat;
     position: relative;
     min-height: 85vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
+.hero-container {
+    max-width: 1400px; /* Estica o limite para o texto ir mais para a esquerda */
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 4%; /* Cola o texto na margem esquerda da tela */
+}
+
 .hero-content {
     max-width: 650px;
-    padding-bottom: 80px; /* Espaço para a barra de países não sobrepor o texto */
+    padding-bottom: 80px; 
 }
 .hero h1 {
     font-size: 72px;
