@@ -3,119 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Santa Mali Imports - Imóveis de Alto Padrão</title>
-    
-    <!-- ESSA É A LINHA QUE CONECTA O VISUAL AO TEXTO -->
+    <title>Santa Mali | Patrimônio Sem Fronteiras</title>
+    <!-- Importação das Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">    
 </head>
 <body>
 
-    <!-- CABEÇALHO -->
-    <header class="header">
-        <div class="header-container">
-            <div class="logo">
-                <!-- A tag abaixo vai puxar a sua imagem. O arquivo na sua pasta precisa se chamar exatamente "logo.png" -->
-                <img src="logo.png" alt="Logo Santa Mali Imports" class="logo-img">
-            </div>
-            <nav class="header-nav">
-                <button class="btn-agendar">Agendar Consultoria</button>
+    <!-- BARRA SUPERIOR -->
+    <div class="top-bar">
+        <span class="icon-globe">🌐</span> Conectando investidores a oportunidades no <span class="destaque-top">Paraguai, Portugal e Brasil</span>, com atendimento personalizado e foco em negócios imobiliários internacionais.
+    </div>
+
+    <!-- CABEÇALHO / MENU -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <!-- A imagem da logo precisa estar no GitHub com o nome logo-novo.png -->
+            <img src="logo-novo.png" alt="Santa Mali" class="logo">
+            <nav class="nav-links">
+                <a href="#" class="active">INÍCIO</a>
+                <a href="#">SOBRE NÓS</a>
+                <a href="#">MERCADOS ⌄</a>
+                <a href="#">SERVIÇOS</a>
+                <a href="#">BLOG</a>
+                <a href="#">CONTATO</a>
             </nav>
+            <a href="https://wa.me/5511999999999" target="_blank" class="btn-dark btn-small">FALE CONOSCO 💬</a>
         </div>
     </header>
 
-    <!-- CONTEÚDO PRINCIPAL -->
-    <main>
-        
-        <!-- PRIMEIRA DOBRA (HERO) -->
-        <section class="hero">
-            <div class="hero-container">
-                <h1 class="hero-titulo">Descubra seu Novo Estilo de Vida Global</h1>
-                <p class="hero-subtitulo">Propriedades Exclusivas e Experiência Internacional Sem Fronteiras para o seu Patrimônio.</p>
-                <a href="https://wa.me/5548992104003?text=Olá,%20gostaria%20de%20falar%20com%20um%20especialista%20da%20Santa%20Mali%20Imports." class="btn-principal" style="text-decoration: none; display: inline-block;" target="_blank">Falar com um Especialista</a>
+    <!-- SEÇÃO PRINCIPAL (HERO) -->
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>Invista além<br>das fronteiras<span class="ponto-dourado">.</span></h1>
+                <hr class="linha-curta">
+                <p>Oportunidades imobiliárias selecionadas<br>no <strong class="destaque-texto">Paraguai</strong>, em <strong class="destaque-texto">Portugal</strong> e no<br><strong class="destaque-texto">Litoral Sul do Brasil.</strong></p>
+                <div class="hero-buttons">
+                    <a href="#oportunidades" class="btn-dark">CONHEÇA AS OPORTUNIDADES →</a>
+                    <a href="https://wa.me/5511999999999" target="_blank" class="btn-outline">AGENDAR UMA CONSULTORIA →</a>
+                </div>
             </div>
-        </section>
-
-        <!-- SEÇÃO DE DESTINOS -->
-        <section class="destinos">
-            <div class="destinos-container">
-                
-                <!-- Card 1: Sul do Brasil -->
-                <article class="card-destino">
-                    <div class="card-imagem-placeholder"></div>
-                    <div class="card-conteudo">
-                        <h3 class="card-titulo">Sul do Brasil</h3>
-                        <p class="card-descricao">Segurança, alta valorização imobiliária e qualidade de vida inigualável nas melhores regiões do Sul.</p>
-                        <button class="btn-secundario">Explorar Propriedades</button>
-                    </div>
-                </article>
-
-                <!-- Card 2: Paraguai -->
-                <article class="card-destino">
-                    <div class="card-imagem-placeholder"></div>
-                    <div class="card-conteudo">
-                        <h3 class="card-titulo">Paraguai</h3>
-                        <p class="card-descricao">Economia em expansão, baixa carga tributária e altíssima rentabilidade para investidores visionários.</p>
-                        <button class="btn-secundario">Explorar Propriedades</button>
-                    </div>
-                </article>
-
-                <!-- Card 3: Portugal -->
-                <article class="card-destino">
-                    <div class="card-imagem-placeholder"></div>
-                    <div class="card-conteudo">
-                        <h3 class="card-titulo">Portugal</h3>
-                        <p class="card-descricao">A sua porta de entrada para a Europa. Segurança, cultura rica e oportunidades de vistos para investidores.</p>
-                        <button class="btn-secundario">Explorar Propriedades</button>
-                    </div>
-                </article>
-
-            </div>
-        </section>
-
-    </main>
-
-    <!-- RODAPÉ COM FORMULÁRIO -->
-    <footer class="rodape-captacao">
-        <div class="rodape-container">
-            
-            <div class="rodape-texto">
-                <h2 class="rodape-titulo">Contate um Especialista</h2>
-                <p class="rodape-descricao">Preencha o formulário ao lado com seus dados. Nossa equipe entrará em contato para um atendimento totalmente personalizado, seguro e focado em encontrar o imóvel ideal para o seu perfil.</p>
-            </div>
-
-            <div class="rodape-formulario">
-                <!-- Formulário de Captação configurado com o seu link -->
-                <form action="https://formspree.io/f/myeglnnz" method="POST" class="formulario">
-                    
-                    <div class="grupo-input">
-                        <input type="text" id="nome" name="nome" placeholder="Nome Completo" required>
-                    </div>
-
-                    <div class="grupo-input">
-                        <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
-                    </div>
-
-                    <div class="grupo-input">
-                        <input type="tel" id="whatsapp" name="whatsapp" placeholder="WhatsApp (com DDD)" required>
-                    </div>
-
-                    <div class="grupo-input">
-                        <select id="regiao" name="regiao" required>
-                            <option value="" disabled selected>Qual região mais te interessa?</option>
-                            <option value="sul-brasil">Sul do Brasil</option>
-                            <option value="paraguai">Paraguai</option>
-                            <option value="portugal">Portugal</option>
-                            <option value="indefinido">Ainda não sei, desejo falar com um consultor</option>
-                        </select>
-                    </div>
-
-                    <button type="submit" class="btn-enviar">Enviar Solicitação</button>
-                </form>
-            </div>
-
         </div>
-    </footer>
+        
+        <!-- BARRA DE PAÍSES NO RODAPÉ DA IMAGEM -->
+        <div class="hero-countries">
+            <div class="container countries-container">
+                <div class="country-item">
+                    <img src="https://flagcdn.com/w40/py.png" alt="Bandeira Paraguai" class="bandeira">
+                    <div>
+                        <h4>PARAGUAI</h4>
+                        <p>Expansão, negócios<br>e novas oportunidades.</p>
+                    </div>
+                </div>
+                <div class="divisor"></div>
+                <div class="country-item">
+                    <img src="https://flagcdn.com/w40/pt.png" alt="Bandeira Portugal" class="bandeira">
+                    <div>
+                        <h4>PORTUGAL</h4>
+                        <p>Patrimônio e qualidade<br>de vida na Europa.</p>
+                    </div>
+                </div>
+                <div class="divisor"></div>
+                <div class="country-item">
+                    <img src="https://flagcdn.com/w40/br.png" alt="Bandeira Brasil" class="bandeira">
+                    <div>
+                        <h4>LITORAL SUL DO BRASIL</h4>
+                        <p>Investimento, turismo<br>e qualidade de vida.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE DIFERENCIAIS -->
+    <section class="features">
+        <div class="container features-container">
+            <div class="feature-box">
+                <div class="feature-icon">👤</div>
+                <h4>ATENDIMENTO<br>PERSONALIZADO</h4>
+                <p>Entendemos seus objetivos para oferecer o que faz sentido para você.</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">🔍</div>
+                <h4>CURADORIA DE<br>OPORTUNIDADES</h4>
+                <p>Selecionamos imóveis e mercados com critérios e atenção aos detalhes.</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">🌐</div>
+                <h4>INTERMEDIAÇÃO<br>INTERNACIONAL</h4>
+                <p>Atuamos na conexão entre investidores e oportunidades com segurança e clareza.</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">🛡️</div>
+                <h4>TRANSPARÊNCIA EM<br>CADA ETAPA</h4>
+                <p>Informações claras e acompanhamento cuidadoso durante todo o processo.</p>
+            </div>
+        </div>
+    </section>
 
 </body>
 </html>
