@@ -18,7 +18,6 @@
     <!-- CABEÇALHO / MENU -->
     <header class="navbar">
         <div class="container nav-container">
-            <!-- A imagem da logo precisa estar no GitHub com o nome logo-novo.png -->
             <img src="logo-novo.png" alt="Santa Mali" class="logo">
             <nav class="nav-links">
                 <a href="#" class="active">INÍCIO</a>
@@ -34,14 +33,14 @@
 
     <!-- SEÇÃO PRINCIPAL (HERO) -->
     <section class="hero">
-        <div class="container hero-container">
+        <div class="hero-container">
             <div class="hero-content">
                 <h1>Invista além<br>das fronteiras<span class="ponto-dourado">.</span></h1>
                 <hr class="linha-curta">
                 <p>Oportunidades imobiliárias selecionadas<br>no <strong class="destaque-texto">Paraguai</strong>, em <strong class="destaque-texto">Portugal</strong> e no<br><strong class="destaque-texto">Litoral Sul do Brasil.</strong></p>
                 <div class="hero-buttons">
                     <a href="#oportunidades" class="btn-dark">CONHEÇA AS OPORTUNIDADES →</a>
-                    <a href="https://wa.me/5511999999999" target="_blank" class="btn-outline">AGENDAR UMA CONSULTORIA →</a>
+                    <a href="#formulario" class="btn-outline">AGENDAR UMA CONSULTORIA →</a>
                 </div>
             </div>
         </div>
@@ -98,6 +97,34 @@
                 <div class="feature-icon">🛡️</div>
                 <h4>TRANSPARÊNCIA EM<br>CADA ETAPA</h4>
                 <p>Informações claras e acompanhamento cuidadoso durante todo o processo.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE FORMULÁRIO (ANCORADA) -->
+    <section id="formulario" class="contato-section">
+        <div class="container contato-container">
+            <div class="contato-texto">
+                <h2>Agende sua Consultoria</h2>
+                <hr class="linha-curta">
+                <p>Preencha seus dados abaixo e um de nossos especialistas em patrimônio internacional entrará em contato para um atendimento exclusivo.</p>
+            </div>
+            
+            <div class="contato-form">
+                <form action="https://formspree.io/f/myeglnnz" method="POST">
+                    <input type="text" name="Nome" placeholder="Seu Nome Completo" required>
+                    <input type="email" name="Email" placeholder="Seu E-mail" required>
+                    <input type="tel" name="WhatsApp" placeholder="Seu WhatsApp (com DDD)" required>
+                    
+                    <select name="Interesse" required>
+                        <option value="" disabled selected>Região de Interesse...</option>
+                        <option value="Litoral Sul do Brasil">Litoral Sul do Brasil (Maríssima)</option>
+                        <option value="Paraguai">Paraguai</option>
+                        <option value="Portugal">Portugal</option>
+                    </select>
+                    
+                    <button type="submit" class="btn-dark btn-full">SOLICITAR CONTATO</button>
+                </form>
             </div>
         </div>
     </section>
