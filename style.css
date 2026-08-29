@@ -1,300 +1,233 @@
-/* IMPORTANDO A FONTE MONTSERRAT DO GOOGLE FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
-
-/* VARIÁVEIS DE CORES PARA FACILITAR ALTERAÇÕES FUTURAS */
+/* --- RESET E VARIÁVEIS --- */
 :root {
     --verde-escuro: #122219;
     --dourado: #b18e5a;
-    --bege-fundo: #f3f1eb;
-    --texto-titulos: #192a20;
-    --texto-corrido: #333333;
+    --bege-claro: #f3f1eb;
+    --bege-fundo: #faf9f6;
+    --texto-escuro: #192a20;
+    --texto-cinza: #333333;
+    --branco: #ffffff;
 }
 
-body {
-    background-color: var(--bege-fundo);
-    color: var(--texto-corrido);
-    font-family: 'Montserrat', sans-serif;
-}
-
-h1, h2, h3, h4 {
-    font-family: 'Playfair Display', serif;
-    color: var(--texto-titulos);
-}
-
-/* RESET BÁSICO E APLICAÇÃO DA FONTE */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
     font-family: 'Montserrat', sans-serif;
+    background-color: var(--bege-fundo);
+    color: var(--texto-cinza);
+    overflow-x: hidden;
 }
 
-
-
-/* 1. CABEÇALHO */
-.header {
-    background-color: var(--verde-escuro);
-    padding: 20px 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--texto-escuro);
+    font-weight: normal;
 }
 
-.header-container {
+.container {
     max-width: 1200px;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 0 20px;
 }
 
-/* Configuração do tamanho da imagem da Logo */
-.logo-img {
-    max-height: 100px;
-    width: auto;
-    display: block;
-}
-
-/* ESTILIZAÇÃO PADRÃO DE BOTÕES */
-/* Botões com fundo escuro (Principal e Enviar) */
-.btn-principal, .btn-enviar {
+/* --- BARRA SUPERIOR --- */
+.top-bar {
     background-color: var(--verde-escuro);
-    color: #ffffff;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 2px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    cursor: pointer;
+    color: var(--branco);
+    text-align: center;
+    padding: 10px;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+}
+.icon-globe { color: var(--dourado); margin-right: 5px; }
+.destaque-top { border-bottom: 1px solid var(--dourado); }
+
+/* --- MENU (NAVBAR) --- */
+.navbar {
+    background-color: var(--bege-claro);
+    padding: 15px 0;
+}
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo { 
+    height: 60px; /* Altura do logo - ajuste se necessário */
+    width: auto;
+}
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+.nav-links a {
     text-decoration: none;
-    transition: all 0.3s ease;
+    color: var(--texto-escuro);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.nav-links a.active {
+    border-bottom: 2px solid var(--dourado);
+    padding-bottom: 3px;
 }
 
-.btn-principal:hover, .btn-enviar:hover {
-    background-color: #000000;
+/* --- BOTÕES --- */
+.btn-dark {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    border-radius: 2px;
+    display: inline-block;
 }
+.btn-dark:hover { background-color: #000; }
 
-/* Botões vazados dourados (Secundário e Agendar) */
-.btn-secundario, .btn-agendar {
+.btn-small { padding: 10px 20px; }
+
+.btn-outline {
     background-color: transparent;
     color: var(--dourado);
     border: 1px solid var(--dourado);
     padding: 15px 30px;
-    border-radius: 2px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    cursor: pointer;
     text-decoration: none;
-    transition: all 0.3s ease;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    border-radius: 2px;
+    display: inline-block;
 }
-
-.btn-secundario:hover, .btn-agendar:hover {
+.btn-outline:hover {
     background-color: var(--dourado);
-    color: #ffffff;
-}
-/* 2. PRIMEIRA DOBRA (HERO) */
-.hero {
-    background: linear-gradient(rgba(13, 43, 38, 0.85), rgba(13, 43, 38, 0.85)), url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
     color: var(--branco);
-    text-align: center;
-    padding: 140px 20px;
 }
 
-.hero-container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.hero-titulo {
-    font-size: 3.2rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: var(--dourado);
-    line-height: 1.2;
-}
-
-.hero-subtitulo {
-    font-size: 1.2rem;
-    font-weight: 300;
-    line-height: 1.6;
-    margin-bottom: 40px;
-}
-
-.btn-principal {
-    padding: 18px 36px;
-    font-size: 18px;
-}
-
-/* 3. SEÇÃO DE DESTINOS (CARDS) */
-.destinos {
-    padding: 80px 20px;
-    background-color: var(--texto-claro);
-}
-
-.destinos-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-}
-
-.card-destino {
-    background-color: var(--branco);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card-destino:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-}
-
-/* Imagens provisórias para os cards */
-.card-imagem-placeholder {
-    height: 240px;
-    background-color: #ddd;
-}
-.card-destino:nth-child(1) .card-imagem-placeholder {
-    background: url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover;
-}
-.card-destino:nth-child(2) .card-imagem-placeholder {
-    background: url('https://images.unsplash.com/photo-1596423735880-5f2a689b903e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover;
-}
-.card-destino:nth-child(3) .card-imagem-placeholder {
-    background: url('https://images.unsplash.com/photo-1555881400-74d7acaacd8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover;
-}
-
-.card-conteudo {
-    padding: 30px;
+/* --- SEÇÃO PRINCIPAL (HERO) COM IMAGEM DIRETO DA WEB --- */
+.hero {
+    /* Imagem de Lisboa com degradê integrado perfeitamente */
+    background: linear-gradient(90deg, var(--bege-claro) 40%, rgba(243, 241, 235, 0.8) 55%, transparent 75%), url('https://images.unsplash.com/photo-1533668837338-0ce5545db4cb?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    position: relative;
+    min-height: 85vh;
     display: flex;
     flex-direction: column;
-    height: calc(100% - 240px);
+    justify-content: center;
 }
-
-.card-titulo {
-    color: var(--verde-escuro);
-    font-size: 1.6rem;
-    margin-bottom: 15px;
-    font-weight: 700;
+.hero-content {
+    max-width: 650px;
+    padding-bottom: 80px; /* Espaço para a barra de países não sobrepor o texto */
 }
-
-.card-descricao {
-    color: #555;
-    font-size: 0.95rem;
-    line-height: 1.6;
+.hero h1 {
+    font-size: 72px;
+    line-height: 1.05;
+    margin-bottom: 10px;
+}
+.ponto-dourado { color: var(--dourado); }
+.linha-curta {
+    width: 40px;
+    border: none;
+    border-top: 2px solid var(--texto-escuro);
     margin-bottom: 25px;
-    flex-grow: 1;
 }
-
-.btn-secundario {
-    width: 100%;
+.hero p {
+    font-size: 19px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    color: var(--texto-escuro);
 }
-
-/* 4. RODAPÉ E FORMULÁRIO DE CAPTAÇÃO */
-.rodape-captacao {
-    background-color: var(--verde-escuro);
-    padding: 80px 20px;
-    color: var(--branco);
-}
-
-.rodape-container {
-    max-width: 1200px;
-    margin: 0 auto;
+.destaque-texto { color: var(--dourado); font-weight: 600; }
+.hero-buttons {
     display: flex;
-    flex-wrap: wrap;
-    gap: 60px;
+    gap: 15px;
+}
+
+/* --- PAÍSES NO RODAPÉ DO HERO --- */
+.hero-countries {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(18, 34, 25, 0.9), rgba(18, 34, 25, 0));
+    padding: 50px 0 25px 0;
+}
+.countries-container {
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
-.rodape-texto {
+.country-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
     flex: 1;
-    min-width: 300px;
+    justify-content: center;
+}
+.bandeira {
+    width: 32px;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+.country-item h4 {
+    color: var(--branco);
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+.country-item p {
+    font-size: 12px;
+    line-height: 1.4;
+    color: #e0e0e0;
+}
+.divisor {
+    width: 1px;
+    height: 40px;
+    background-color: rgba(255,255,255,0.2);
 }
 
-.rodape-titulo {
+/* --- SEÇÃO DIFERENCIAIS --- */
+.features {
+    background-color: var(--bege-fundo);
+    padding: 80px 0;
+}
+.features-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+.feature-box {
+    flex: 1;
+    text-align: left;
+}
+.feature-icon {
+    width: 65px;
+    height: 65px;
+    border: 1px solid var(--dourado);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
     color: var(--dourado);
-    font-size: 2.8rem;
-    margin-bottom: 20px;
-    font-weight: 700;
-}
-
-.rodape-descricao {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    font-weight: 300;
-    color: rgba(255, 255, 255, 0.9);
-}
-
-.rodape-formulario {
-    flex: 1;
-    min-width: 320px;
-    background-color: rgba(255, 255, 255, 0.03);
-    padding: 40px;
-    border-radius: 12px;
-    border: 1px solid rgba(203, 163, 88, 0.2);
-}
-
-.grupo-input {
     margin-bottom: 20px;
 }
-
-.grupo-input input, .grupo-input select {
-    width: 100%;
-    padding: 16px;
-    border-radius: 8px;
-    border: none;
-    background-color: var(--branco);
+.feature-box h4 {
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
     color: var(--texto-escuro);
-    font-size: 1rem;
-    outline: none;
-    transition: box-shadow 0.3s ease;
 }
-
-.grupo-input input:focus, .grupo-input select:focus {
-    box-shadow: 0 0 0 3px rgba(203, 163, 88, 0.5);
-}
-
-.grupo-input select:invalid {
-    color: #777;
-}
-
-.btn-enviar {
-    width: 100%;
-    padding: 18px;
-    font-size: 1.1rem;
-    margin-top: 10px;
-}
-
-/* 5. REGRAS PARA CELULARES E TABLETS */
-@media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    .hero-titulo {
-        font-size: 2.2rem;
-    }
-    
-    .rodape-container {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .rodape-formulario {
-        width: 100%;
-        padding: 30px 20px;
-    }
+.feature-box p {
+    font-size: 13px;
+    line-height: 1.6;
 }
